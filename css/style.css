@@ -1,0 +1,231 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 18px;
+}
+
+/* COLORS
+
+$primary: #000431;
+$seconday: #FFF500;*/
+/* DEVICES */
+/*body{
+	height:100%;
+	widht:100%;
+}*/
+@media screen and (max-width: 400px) {
+  body {
+    min-height: 100%;
+    height: auto;
+  }
+
+  .bodyContent {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .bodyContent h2, .bodyContent h3 {
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    /*text-decoration: italic;*/
+    font-weight: 400;
+  }
+  .bodyContent h2 {
+    margin-bottom: 5%;
+  }
+
+  .navbarContent {
+    position: relative;
+    height: 130vh;
+    width: 100vw;
+    background: url("../assets/images/mobile/image-hero.jpg") no-repeat;
+    background-size: cover;
+  }
+  .navbarContent .navbar-nav {
+    display: none;
+  }
+  .navbarContent .brand, .navbarContent .icon {
+    display: flex;
+    position: absolute;
+    color: white;
+  }
+  .navbarContent .brand {
+    font-family: "Alata", sans-serif;
+    font-size: 7vw;
+    top: 4vh;
+    left: 5vw;
+  }
+  .navbarContent .icon {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    font-size: 5vh;
+    text-decoration: none;
+    opacity: 0.95;
+  }
+  .navbarContent .icon_close {
+    display: none;
+  }
+  .navbarContent--title {
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    color: white;
+    font-size: 12vw;
+    /*height:40%;*/
+    position: absolute;
+    bottom: 33%;
+    margin: 0 5%;
+    padding: 0.25em;
+    border: 2px solid white;
+    opacity: 0.8;
+  }
+
+  .responsive {
+    background: linear-gradient(black 100%, transparent 0%);
+    position: relative;
+  }
+  .responsive .navbar-nav {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  }
+  .responsive .navbar-nav .nav-item {
+    line-height: 1.8;
+  }
+  .responsive .navbar-nav .nav-item .nav-link {
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 8vw;
+    opacity: 0.8;
+  }
+  .responsive .icon {
+    display: none;
+  }
+  .responsive .icon_close {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  .responsive .navbarContent--title {
+    display: none;
+  }
+
+  .main--container {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+    padding: 15% 5%;
+    border: 2px solid yellow;
+    /*jaune*/
+  }
+  .main--container .row {
+    border: 2px solid #20370b;
+    /* vert kaki*/
+  }
+  .main--container .row .img_VR {
+    /*height:40vh;*/
+    width: 100%;
+  }
+  .main--container .row .col {
+    text-align: center;
+    padding: 5%;
+  }
+  .main--container .row .col .interactive_txt {
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+  .main--container .container_grid, .main--container .button {
+    text-transform: uppercase;
+  }
+  .main--container .container_grid {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10%;
+    border: 2px solid pink;
+    /*rose*/
+  }
+  .main--container .container_grid .button {
+    font-family: "Alata", sans-serif;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid black;
+    color: black;
+    font-size: 5vw;
+    background-color: transparent;
+    font-weight: 100;
+  }
+  .main--container .container_grid .grid {
+    display: grid;
+    grid-template-rows: repeat(8, minmax(150px, 1fr));
+    border: 2px solid red;
+    /*rouge*/
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    /*background-size:100% 100%;
+    background-position:center;
+    background-repeat: no-repeat;*/
+  }
+  .main--container .container_grid .grid .item {
+    position: relative;
+    border: 2px solid green;
+  }
+  .main--container .container_grid .grid .item h3 {
+    width: 40%;
+    margin-left: 5%;
+    font-size: 7vw;
+    font-weight: 100;
+    color: white;
+    border: 2px solid orange;
+    /*orange*/
+    position: absolute;
+    bottom: 20%;
+    opacity: 0.9;
+  }
+  .main--container .container_grid .grid .earth {
+    background: url("../assets/images/mobile/image-deep-earth.jpg") no-repeat;
+  }
+  .main--container .container_grid .grid .arcade {
+    background: url("../assets/images/mobile/image-night-arcade.jpg") no-repeat;
+  }
+  .main--container .container_grid .grid .soccer {
+    background: url("../assets/images/mobile/image-soccer-team.jpg") no-repeat;
+  }
+  .main--container .container_grid .grid .the_grid {
+    background: url("../assets/images/mobile/image-grid.jpg") no-repeat;
+  }
+  .main--container .container_grid .grid .above_VR {
+    background: url("../assets/images/mobile/image-from-above.jpg") no-repeat;
+  }
+  .main--container .container_grid .grid .borealis {
+    background: url("../assets/images/mobile/image-pocket-borealis.jpg") no-repeat;
+  }
+  .main--container .container_grid .grid .curiosity {
+    background: url("../assets/images/mobile/image-curiosity.jpg") no-repeat;
+  }
+  .main--container .container_grid .grid .fisheye {
+    background: url("../assets/images/mobile/image-fisheye.jpg") no-repeat;
+    /*background-origin: border-box;*/
+  }
+  .main--container .container_grid .grid .earth, .main--container .container_grid .grid .arcade, .main--container .container_grid .grid .soccer, .main--container .container_grid .grid .the_grid, .main--container .container_grid .grid .above_VR, .main--container .container_grid .grid .borealis, .main--container .container_grid .grid .curiosity, .main--container .container_grid .grid .fisheye {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    -o-background-size: contain;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
